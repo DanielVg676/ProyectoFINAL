@@ -342,7 +342,7 @@ def actions_menu_gerente(id_gerente):
             id_banco=input("ingrese el id del banco correspondiente: ")
 
             objeto_cliente=usuario.empleado(user, contrasena, nombre, direccion, telefono, email, salario, puesto, id_banco)
-            registrado=usuario.empleado.registrar_Empleado(objeto_cliente)
+            resultado=usuario.empleado.registrar_Empleado(objeto_cliente)
 
             if resultado:
                 print(f"\n\t El empleado {nombre} se ha registrado correctamente")
