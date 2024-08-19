@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 12, 2024 at 04:20 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 18-08-2024 a las 01:16:47
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bd_pacific`
+-- Base de datos: `bd_pacific`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `clientes`
+-- Estructura de tabla para la tabla `clientes`
 --
 
 CREATE TABLE `clientes` (
@@ -41,25 +41,28 @@ CREATE TABLE `clientes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `clientes`
+-- Volcado de datos para la tabla `clientes`
 --
 
 INSERT INTO `clientes` (`id`, `usuario`, `contrasena`, `nombre`, `direccion`, `telefono`, `email`, `ocupacion`, `historial`, `saldo`) VALUES
 (1, 120, '120', 'Cristian V', 'Colinas del saltito 325', '6182066613', 'cris022@gmail.com', 'maestro', '14208', 2000000),
-(2, 183147, '7c9e7c1494b2684ab7c1', 'pepe ramirez', 'la zapata', '61829011', 'pepe@gmail.com', 'maestro', '', 5000),
+(2, 183147, '7c9e7c1494b2684ab7c1', 'pepe ramirez', 'la zapata', '61829011', 'pepe@gmail.com', 'maestro', '', 5200),
 (3, 321, '8d23cf6c86e834a7aa6e', 'daniel', 'valle', '6181563424', 'dv9565', 'empleado', '', 2000),
 (4, 654, '92a6a32f99def322d70e', 'daniel', 'valle', '6181563424', 'dv9565', 'conserje', '', 4000),
 (5, 321, '8d23cf6c86e834a7aa6e', 'daniel', 'asdasdas', '2342342', 'asdasd', 'empleado', '', 2000),
-(6, 131313, '131313', 'ALAMBRITO', 'TEJERINGO', '6181563424', 'DCDS', 'psicologo', '', 5000),
-(7, 453, 'd83c7ee736be931d85b7', 'elba nana nita', 'zona media', '6181563424', 'sadcas', 'astronauta', '', 5000000),
+(6, 131313, '131313', 'ALAMBRITO', 'TEJERINGO', '6181563424', 'DCDS', 'psicologo', '', 4597),
+(7, 453, 'd83c7ee736be931d85b7', 'El bana nita ita', 'Nazas #301', '6181563424', 'bananita@gmail.com', 'astronauta', '', 5000000),
 (8, 454546, 'a55e3cf3331a74219d4b', 'elbalaso', '20 de noviembre', '61856745', 'sadasf', 'abogada', '', 2000),
 (9, 9685, 'c83e0fc471e3faf8daf9', 'elsapato', '20 de noviembre', '6181563424', 'sadsad', 'empleado', '', 2000),
-(10, 6474, '32037f51f7c37b9e660a', 'Tonny strak', 'Torre de los vengadores', '6181563424', 'tonnybbQgmail.com', 'dios', '', 2000000);
+(10, 6474, '32037f51f7c37b9e660a', 'Tonny strak', 'Torre de los vengadores', '6181563424', 'tonnybbQgmail.com', 'dios', '', 2000000),
+(11, 9090, 'c4876de490dcf38b74d6', 'Dano PACK', 'Valle de suchil #309', '6181563424', 'dv9565', 'Astronauta', '', 2000),
+(12, 9191, 'd5330200931a810748a2', 'Cristian', 'Valle verde', '6186452324', 'crisQ', 'Proxeneta', '', 20000),
+(14, 911, 'a5ccb1c538e34663a658', 'Natalia Tiemla', 'conade', '6181563424', 'nat34242', 'Lic', '', 200000);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `empleados`
+-- Estructura de tabla para la tabla `empleados`
 --
 
 CREATE TABLE `empleados` (
@@ -76,17 +79,17 @@ CREATE TABLE `empleados` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `empleados`
+-- Volcado de datos para la tabla `empleados`
 --
 
 INSERT INTO `empleados` (`ID`, `usuario`, `contrasena`, `nombre`, `direccion`, `telefono`, `email`, `salario`, `puesto`, `id_banco`) VALUES
-(3, 987, '987', 'Daniel Contreras', 'valle de suchil', '6181563424', 'dv956543', 20000, 'empleado', NULL),
+(3, 987, '987', 'Daniel Contreras', 'valle de suchil', '6181563424', 'dv956543', 20000, 'gerente', NULL),
 (4, 789, '789', 'empleadonormal', 'valle', '6182341212', 'dcdsada', 2000, 'conserje', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prestamos`
+-- Estructura de tabla para la tabla `prestamos`
 --
 
 CREATE TABLE `prestamos` (
@@ -97,18 +100,19 @@ CREATE TABLE `prestamos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `prestamos`
+-- Volcado de datos para la tabla `prestamos`
 --
 
 INSERT INTO `prestamos` (`id_prestamo`, `id_cliente`, `permiso_prestamo`, `id_transaccion`) VALUES
 (1, 1, 1, 1),
 (2, 1, 0, 1),
-(3, 1, 1, 1);
+(3, 1, 1, 1),
+(4, 6, 0, 11);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `retiros`
+-- Estructura de tabla para la tabla `retiros`
 --
 
 CREATE TABLE `retiros` (
@@ -119,18 +123,19 @@ CREATE TABLE `retiros` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `retiros`
+-- Volcado de datos para la tabla `retiros`
 --
 
 INSERT INTO `retiros` (`id_retiro`, `id_cliente`, `monto`, `id_transaccion`) VALUES
 (1, 1, 300, 1),
 (2, 2, 500, 2),
-(3, 3, 2000, 3);
+(3, 3, 2000, 3),
+(4, 6, 200, 10);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transacciones`
+-- Estructura de tabla para la tabla `transacciones`
 --
 
 CREATE TABLE `transacciones` (
@@ -144,7 +149,7 @@ CREATE TABLE `transacciones` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `transacciones`
+-- Volcado de datos para la tabla `transacciones`
 --
 
 INSERT INTO `transacciones` (`id_transaccion`, `descripcion`, `fecha`, `monto`, `id_cliente`, `id_banco`, `tipo`) VALUES
@@ -155,12 +160,15 @@ INSERT INTO `transacciones` (`id_transaccion`, `descripcion`, `fecha`, `monto`, 
 (5, 'para pepto', '2024-08-08', 200, 1, NULL, 'transferencia'),
 (6, 'para pepito', '2024-08-08', 200, 1, NULL, 'transferencia'),
 (7, 'para pepito', '2024-08-08', 300, 1, NULL, 'transferencia'),
-(8, 'para pepito', '2024-08-08', 100, 1, NULL, 'transferencia');
+(8, 'para pepito', '2024-08-08', 100, 1, NULL, 'transferencia'),
+(9, 'renta', '2024-08-17', 200, 6, NULL, 'TRANSFERENCIA'),
+(10, '', '2024-08-17', 200, 6, NULL, 'RETIRO'),
+(11, 'xfa', '2024-08-17', 200, 6, NULL, 'PRESTAMO');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transferencias`
+-- Estructura de tabla para la tabla `transferencias`
 --
 
 CREATE TABLE `transferencias` (
@@ -173,7 +181,7 @@ CREATE TABLE `transferencias` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `transferencias`
+-- Volcado de datos para la tabla `transferencias`
 --
 
 INSERT INTO `transferencias` (`id_transferencia`, `id_emisor`, `usuario_destino`, `banco_destino`, `impuesto`, `id_transaccion`) VALUES
@@ -183,26 +191,27 @@ INSERT INTO `transferencias` (`id_transferencia`, `id_emisor`, `usuario_destino`
 (4, 1, 183147, 1, 30, 4),
 (5, 1, 183147, 1, 30, 5),
 (6, 1, 183147, 1, 30, 6),
-(7, 1, 183147, 1, 30, 7);
+(7, 1, 183147, 1, 30, 7),
+(8, 6, 183147, 1, 3, 9);
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `clientes`
+-- Indices de la tabla `clientes`
 --
 ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `empleados`
+-- Indices de la tabla `empleados`
 --
 ALTER TABLE `empleados`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `prestamos`
+-- Indices de la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
   ADD PRIMARY KEY (`id_prestamo`),
@@ -210,7 +219,7 @@ ALTER TABLE `prestamos`
   ADD KEY `id_transaccion` (`id_transaccion`);
 
 --
--- Indexes for table `retiros`
+-- Indices de la tabla `retiros`
 --
 ALTER TABLE `retiros`
   ADD PRIMARY KEY (`id_retiro`),
@@ -218,14 +227,14 @@ ALTER TABLE `retiros`
   ADD KEY `id_transaccion` (`id_transaccion`);
 
 --
--- Indexes for table `transacciones`
+-- Indices de la tabla `transacciones`
 --
 ALTER TABLE `transacciones`
   ADD PRIMARY KEY (`id_transaccion`),
   ADD KEY `id_cliente` (`id_cliente`);
 
 --
--- Indexes for table `transferencias`
+-- Indices de la tabla `transferencias`
 --
 ALTER TABLE `transferencias`
   ADD PRIMARY KEY (`id_transferencia`),
@@ -233,71 +242,71 @@ ALTER TABLE `transferencias`
   ADD KEY `id_emisor` (`id_emisor`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `clientes`
+-- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `empleados`
+-- AUTO_INCREMENT de la tabla `empleados`
 --
 ALTER TABLE `empleados`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `prestamos`
+-- AUTO_INCREMENT de la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
-  MODIFY `id_prestamo` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_prestamo` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `retiros`
+-- AUTO_INCREMENT de la tabla `retiros`
 --
 ALTER TABLE `retiros`
-  MODIFY `id_retiro` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_retiro` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `transacciones`
+-- AUTO_INCREMENT de la tabla `transacciones`
 --
 ALTER TABLE `transacciones`
-  MODIFY `id_transaccion` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_transaccion` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `transferencias`
+-- AUTO_INCREMENT de la tabla `transferencias`
 --
 ALTER TABLE `transferencias`
-  MODIFY `id_transferencia` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_transferencia` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `prestamos`
+-- Filtros para la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
   ADD CONSTRAINT `prestamos_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id`),
   ADD CONSTRAINT `prestamos_ibfk_2` FOREIGN KEY (`id_transaccion`) REFERENCES `transacciones` (`id_transaccion`);
 
 --
--- Constraints for table `retiros`
+-- Filtros para la tabla `retiros`
 --
 ALTER TABLE `retiros`
   ADD CONSTRAINT `retiros_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id`),
   ADD CONSTRAINT `retiros_ibfk_2` FOREIGN KEY (`id_transaccion`) REFERENCES `transacciones` (`id_transaccion`);
 
 --
--- Constraints for table `transacciones`
+-- Filtros para la tabla `transacciones`
 --
 ALTER TABLE `transacciones`
   ADD CONSTRAINT `transacciones_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id`);
 
 --
--- Constraints for table `transferencias`
+-- Filtros para la tabla `transferencias`
 --
 ALTER TABLE `transferencias`
   ADD CONSTRAINT `transferencias_ibfk_1` FOREIGN KEY (`id_emisor`) REFERENCES `clientes` (`id`),

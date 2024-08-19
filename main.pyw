@@ -1,0 +1,4 @@
+from funciones import show_bank_name
+from vistas.menu_principal.ventana_menu_principal import show_welcome_and_options
+
+show_welcome_and_options() 

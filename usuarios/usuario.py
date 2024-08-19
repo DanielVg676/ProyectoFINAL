@@ -5,7 +5,7 @@ from abc import ABC, abstractmethod
 class Usuario(ABC):
     def __init__(self, usuario=None, contrasena=None, nombre=None, direccion=None, telefono=None, email=None, id_empleado=None, id_cliente=None):
         self.__usuario = usuario
-        self.__contrasena = self.hash_password(contrasena) if contrasena else None
+        self.__contrasena = contrasena               #hash_password(contrasena) if contrasena else None
         self.__nombre = nombre
         self.__direccion = direccion
         self.__telefono = telefono
@@ -73,6 +73,7 @@ class Usuario(ABC):
     # Método para iniciar sesión    /// AQUI CAMBIE LA VARIABLE USUARIO POR CLIENTE Y EMPLEADO PARA PODER DIFERENCIAR Y NO TENER PROBLEMAS CUANDO SE ASIGNE UNA U OTRA
     @staticmethod
     def iniciar_sesion(usuario, contrasena):
+        print(contrasena)
         try:
             # Verifica si es un cliente
             cursor.execute(
@@ -171,7 +172,7 @@ class clientes(Usuario):
             )
             resultado=cursor.fetchall()
             print(f"Tu saldo disponible es de {resultado}")
-            return True
+            return resultado
         except Exception as e:
             print(f"Error al registrar el usuario: {e}")
             return False
